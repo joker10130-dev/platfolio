@@ -8,9 +8,6 @@ const ProfileSchema = new mongoose.Schema({
   location: {
     type: String
   },
-  tel: {
-    type: String
-  },
   status: {
     type: String,
     required: true
@@ -107,7 +104,10 @@ const ProfileSchema = new mongoose.Schema({
       }
     }
   ],
-  social: {
+  contacts: {
+    phone: {
+      type: String
+    },
     youtube: {
       type: String
     },
