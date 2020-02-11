@@ -8,7 +8,10 @@ connectDB();
 
 app.use(express.json({ extends: false }));
 
-// TODO: Define Routes
+// Define Routes
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/profile', require('./routes/api/profile'));
 
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
