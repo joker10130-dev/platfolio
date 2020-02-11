@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Platfolio",
+  "name": "A personal project using MERN stack",
   "icons": [
     {
       "src": "favicon.ico",
