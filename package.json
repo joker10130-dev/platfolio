@@ -1,0 +1,36 @@
+{
+  "name": "platfolio",
+  "version": "1.0.0",
+  "description": "Personal project from MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npx nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joker10130-dev/platfolio.git"
+  },
+  "author": "Narongrit Rodphroboon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joker10130-dev/platfolio/issues"
+  },
+  "homepage": "https://github.com/joker10130-dev/platfolio#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.5",
+    "eslint-plugin-react": "^7.18.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.11",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
