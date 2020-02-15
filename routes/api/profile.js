@@ -327,4 +327,81 @@ router.delete('/education/:edu_id', auth, async (req, res) => {
   }
 });
 
+// @Route   PUT api/profile/project
+// @desc    Add profile project
+// @access  Private
+router.put(
+  '/project',
+  [
+    auth,
+    [
+      check('name', 'Project Name is required')
+        .not()
+        .isEmpty(),
+      check('skills', 'Skills is required')
+        .not()
+        .isEmpty(),
+      check('description', 'Description is required')
+        .not()
+        .isEmpty()
+    ]
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    const { name, youtube, web, github, skills, description } = req.body;
+
+    const newProject = {};
+
+    newProject.user = req.user.id;
+    if (name) newProject.name = name;
+    if (description) newProject.description = description;
+    if (skills) {
+      newProject.skills = skills.split(',').map(skill => skill.trim());
+    }
+    if (youtube) newProject.youtube = youtube;
+    if (web) newProject.web = web;
+    if (github) newProject.github = github;
+
+    try {
+      const profile = await Profile.findOne({ user: req.user.id });
+
+      profile.projects.unshift(newProject);
+
+      await profile.save();
+
+      res.json(profile);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  }
+);
+
+// @Route   DELETE api/profile/project/:pro_id
+// @desc    Delete project from profile
+// @access  Private
+router.delete('/project/:pro_id', auth, async (req, res) => {
+  try {
+    const profile = await Profile.findOne({ user: req.user.id });
+
+    // Get remove index
+    const removeIndex = profile.projects
+      .map(item => item.id)
+      .indexOf(req.params.exp_id);
+
+    profile.projects.splice(removeIndex, 1);
+
+    await profile.save();
+
+    res.json(profile);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;

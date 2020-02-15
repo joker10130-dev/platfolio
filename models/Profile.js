@@ -87,16 +87,14 @@ const ProfileSchema = new mongoose.Schema({
       description: {
         type: String
       },
-      link: {
-        youtube: {
-          type: String
-        },
-        web: {
-          type: String
-        },
-        github: {
-          type: String
-        }
+      youtube: {
+        type: String
+      },
+      web: {
+        type: String
+      },
+      github: {
+        type: String
       },
       skills: {
         type: [String],
