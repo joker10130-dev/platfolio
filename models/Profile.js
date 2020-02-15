@@ -5,6 +5,12 @@ const ProfileSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
   },
+  company: {
+    type: String
+  },
+  website: {
+    type: String
+  },
   location: {
     type: String
   },
