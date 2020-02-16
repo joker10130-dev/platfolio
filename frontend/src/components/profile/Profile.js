@@ -26,8 +26,8 @@ const Profile = ({
         <Spinner />
       ) : (
         <Fragment>
-          <Link to='/portfolio' className='btn btn-light'>
-            Back To Portfolio
+          <Link to='/profiles' className='btn btn-light'>
+            Back To Profiles
           </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&
@@ -70,19 +70,18 @@ const Profile = ({
                 <h4>No education credentials</h4>
               )}
             </div>
-
-            {/* <div className='profile-edu bg-white p-2'>
+            <div className='bg-white p-2'>
               <h2 className='text-primary'>Project</h2>
               {profile.projects.length > 0 ? (
                 <Fragment>
-                  {profile.projects.map(project => (
-                    <ProfileProject key={project._id} education={project} />
+                  {profile.projects.map(pro => (
+                    <ProfileProject key={pro._id} projects={pro} />
                   ))}
                 </Fragment>
               ) : (
-                <h4>No project credentials</h4>
+                <h4>No education credentials</h4>
               )}
-            </div> */}
+            </div>
           </div>
         </Fragment>
       )}

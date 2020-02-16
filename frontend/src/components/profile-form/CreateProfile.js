@@ -17,6 +17,7 @@ const CreateProfile = ({
     status: '',
     skills: '',
     bio: '',
+    phone: '',
     twitter: '',
     facebook: '',
     linkedin: '',
@@ -31,6 +32,7 @@ const CreateProfile = ({
     status,
     skills,
     bio,
+    phone,
     twitter,
     facebook,
     linkedin,
@@ -121,6 +123,15 @@ const CreateProfile = ({
           <small className='form-text'>
             Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
           </small>
+        </div>
+        <div className='form-group'>
+          <input
+            type='text'
+            placeholder='Phone number'
+            name='phone'
+            value={phone}
+            onChange={e => onChange(e)}
+          />
         </div>
         <div className='form-group'>
           <textarea

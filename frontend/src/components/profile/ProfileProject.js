@@ -18,13 +18,22 @@ const ProfileProject = ({
       ))}
     </p>
     <p>
-      <strong>Website: </strong> {web}
+      <strong>Website: </strong>{' '}
+      <a target='_blank' href={web} rel='noopener noreferrer'>
+        {web}
+      </a>
     </p>
     <p>
-      <strong>Youtube: </strong> {youtube}
+      <strong>Youtube: </strong>{' '}
+      <a target='_blank' href={youtube} rel='noopener noreferrer'>
+        {youtube}
+      </a>
     </p>
     <p>
-      <strong>Github: </strong> {github}
+      <strong>Github: </strong>{' '}
+      <a target='_blank' href={github} rel='noopener noreferrer'>
+        {github}
+      </a>
     </p>
   </div>
 );

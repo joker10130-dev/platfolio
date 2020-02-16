@@ -373,97 +373,87 @@ button {
 }
 
 /* Profile Page */
-.profile-grid {
+/* .profile-grid {
   display: grid;
   grid-template-areas:
     'top top'
     'about about'
     'exp edu'
-    'github github';
+    'pro pro';
   grid-gap: 1rem;
-}
+} */
 
-.profile-top {
+/* .profile-top {
   grid-area: top;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
+} */
 
 .profile-top img {
   width: 250px;
 }
 
-.profile-top .icons a {
+/* .profile-top .icons a {
   color: #fff;
   margin: 0 0.3rem;
-}
+} */
 
-.profile-top .icons a:hover {
+/* .profile-top .icons a:hover {
   color: var(--dark-color);
-}
+} */
 
-.profile-about {
+/* .profile-about {
   grid-area: about;
   text-align: center;
-}
+} */
 
-.profile-about .skills {
+/* .profile-about .skills {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
+} */
 
-.profile-exp {
+/* .profile-exp {
   grid-area: exp;
-}
+} */
 
-.profile-edu {
+/* .profile-edu {
   grid-area: edu;
-}
+} */
 
-.profile-exp h2,
-.profile-edu h2 {
+/* .profile-pro {
+  grid-area: pro;
+} */
+
+/* .profile-exp h2,
+.profile-edu h2,
+.profile-pro h2 {
   margin-bottom: 1rem;
-}
+} */
 
-.profile-exp > div,
-.profile-edu > div {
+/* .profile-exp > div,
+.profile-edu > div,
+.profile-pro > div {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: #ccc 1px dotted;
-}
+} */
 
-.profile-exp > div:last-child,
-.profile-edu > div:last-child {
+/* .profile-exp > div:last-child,
+.profile-edu > div:last-child,
+.profile-pro > div:last-child {
   border: 0;
-}
+} */
 
-.profile-exp p,
-.profile-edu p {
+/* .profile-exp p,
+.profile-edu p,
+.profile-pro p {
   margin: 0.5rem 0;
-}
-
-.profile-github {
-  grid-area: github;
-}
-
-.profile-github .repo {
-  display: flex;
-}
-
-.profile-github .repo > div:first-child {
-  flex: 7;
-  flex-basis: 70%;
-}
-
-.profile-github > div:last-child {
-  flex: 3;
-  flex-basis: 20%;
-}
+} */
 
 /* Posts Page */
 .post-form .post-form-header {
@@ -566,7 +556,7 @@ button {
       'about'
       'exp'
       'edu'
-      'github';
+      'pro';
   }
 
   .profile-about .skills {

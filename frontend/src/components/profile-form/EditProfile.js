@@ -17,6 +17,7 @@ const EditProfile = ({
     status: '',
     skills: '',
     bio: '',
+    phone: '',
     twitter: '',
     facebook: '',
     linkedin: '',
@@ -36,11 +37,12 @@ const EditProfile = ({
       status: loading || !profile.status ? '' : profile.status,
       skills: loading || !profile.skills ? '' : profile.skills.join(','),
       bio: loading || !profile.bio ? '' : profile.bio,
-      twitter: loading || !profile.social ? '' : profile.social.twitter,
-      facebook: loading || !profile.social ? '' : profile.social.facebook,
-      linkedin: loading || !profile.social ? '' : profile.social.linkedin,
-      youtube: loading || !profile.social ? '' : profile.social.youtube,
-      instagram: loading || !profile.social ? '' : profile.social.instagram
+      phone: loading || !profile.phone ? '' : profile.phone,
+      twitter: loading || !profile.contacts ? '' : profile.contacts.twitter,
+      facebook: loading || !profile.contacts ? '' : profile.contacts.facebook,
+      linkedin: loading || !profile.contacts ? '' : profile.contacts.linkedin,
+      youtube: loading || !profile.contacts ? '' : profile.contacts.youtube,
+      instagram: loading || !profile.contacts ? '' : profile.contacts.instagram
     });
   }, [loading, getCurrentProfile]);
 
@@ -51,6 +53,7 @@ const EditProfile = ({
     status,
     skills,
     bio,
+    phone,
     twitter,
     facebook,
     linkedin,
@@ -137,6 +140,15 @@ const EditProfile = ({
           <small className='form-text'>
             Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
           </small>
+        </div>
+        <div className='form-group'>
+          <input
+            type='text'
+            placeholder='Phone number'
+            name='phone'
+            value={phone}
+            onChange={e => onChange(e)}
+          />
         </div>
         <div className='form-group'>
           <textarea
