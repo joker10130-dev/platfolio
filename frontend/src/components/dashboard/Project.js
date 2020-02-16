@@ -17,17 +17,17 @@ const Project = ({ project, deleteProject }) => {
         </td>
         <td>
           {pro.youtube && (
-            <a href={pro.youtube}>
+            <a target='_blank' href={pro.youtube} rel='noopener noreferrer'>
               <i className='fab fa-youtube fa-2x' />
             </a>
           )}
           {pro.web && (
-            <a href={pro.web}>
+            <a target='_blank' href={pro.web} rel='noopener noreferrer'>
               <i className='fas fa-globe fa-2x' />
             </a>
           )}
           {pro.github && (
-            <a href={pro.github}>
+            <a target='_blank' href={pro.github} rel='noopener noreferrer'>
               <i className='fab fa-github fa-2x' />
             </a>
           )}

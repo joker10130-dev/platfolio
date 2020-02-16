@@ -239,7 +239,7 @@ export const deleteEducation = id => async dispatch => {
   }
 };
 
-// Delete experience
+// Delete project
 export const deleteProject = id => async dispatch => {
   try {
     const res = await axios.delete(`/api/profile/project/${id}`);

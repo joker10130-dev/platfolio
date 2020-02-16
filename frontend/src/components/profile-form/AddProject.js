@@ -14,8 +14,6 @@ const AddProject = ({ addProject, history }) => {
     description: ''
   });
 
-  const [toDateDisabled, toggleDisabled] = useState(false);
-
   const { name, youtube, web, github, skills, description } = formData;
 
   const onChange = e =>
