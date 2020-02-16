@@ -37,7 +37,7 @@ const EditProfile = ({
       status: loading || !profile.status ? '' : profile.status,
       skills: loading || !profile.skills ? '' : profile.skills.join(','),
       bio: loading || !profile.bio ? '' : profile.bio,
-      phone: loading || !profile.phone ? '' : profile.phone,
+      phone: loading || !profile.contacts.phone ? '' : profile.contacts.phone,
       twitter: loading || !profile.contacts ? '' : profile.contacts.twitter,
       facebook: loading || !profile.contacts ? '' : profile.contacts.facebook,
       linkedin: loading || !profile.contacts ? '' : profile.contacts.linkedin,
