@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
+import ProfileContact from './ProfileContact';
 import ProfileExperience from './ProfileExperience';
 import ProfileEducation from './ProfileEducation';
 import ProfileProject from './ProfileProject';
@@ -36,51 +37,72 @@ const Profile = ({
                 Edit Profile
               </Link>
             )}
-          <div className='profile-grid my-1'>
-            <ProfileTop profile={profile} />
-            <ProfileAbout profile={profile} />
-            <div className='profile-exp bg-white p-2'>
-              <h2 className='text-primary'>Experience</h2>
-              {profile.experience.length > 0 ? (
-                <Fragment>
-                  {profile.experience.map(experience => (
-                    <ProfileExperience
-                      key={experience._id}
-                      experience={experience}
-                    />
-                  ))}
-                </Fragment>
-              ) : (
-                <h4>No experience credentials</h4>
-              )}
-            </div>
 
-            <div className='profile-edu bg-white p-2'>
-              <h2 className='text-primary'>Education</h2>
-              {profile.education.length > 0 ? (
-                <Fragment>
-                  {profile.education.map(education => (
-                    <ProfileEducation
-                      key={education._id}
-                      education={education}
-                    />
-                  ))}
-                </Fragment>
-              ) : (
-                <h4>No education credentials</h4>
-              )}
+          <div className='row'>
+            <div className='col-sm-8 col-xs-12'>
+              <div className='row'>
+                <div className='col-sm-12'>
+                  <ProfileTop profile={profile} />
+                </div>
+                <div className='col-sm-6 col-xs-12'>
+                  <div className='profile-exp bg-white p-2'>
+                    <h2 className='text-primary'>Experience</h2>
+                    {profile.experience.length > 0 ? (
+                      <Fragment>
+                        {profile.experience.map(experience => (
+                          <ProfileExperience
+                            key={experience._id}
+                            experience={experience}
+                          />
+                        ))}
+                      </Fragment>
+                    ) : (
+                      <h4>No experience credentials</h4>
+                    )}
+                  </div>
+                </div>
+                <div className='col-sm-6 col-xs-12'>
+                  <div className='profile-edu bg-white p-2'>
+                    <h2 className='text-primary'>Education</h2>
+                    {profile.education.length > 0 ? (
+                      <Fragment>
+                        {profile.education.map(education => (
+                          <ProfileEducation
+                            key={education._id}
+                            education={education}
+                          />
+                        ))}
+                      </Fragment>
+                    ) : (
+                      <h4>No education credentials</h4>
+                    )}
+                  </div>
+                </div>
+                <div className='col-sm-12 col-xs-12'>
+                  <div className='profile-pro bg-white p-2'>
+                    <h2 className='text-primary'>Project</h2>
+                    {profile.projects.length > 0 ? (
+                      <Fragment>
+                        {profile.projects.map(pro => (
+                          <ProfileProject key={pro._id} projects={pro} />
+                        ))}
+                      </Fragment>
+                    ) : (
+                      <h4>No education credentials</h4>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className='bg-white p-2'>
-              <h2 className='text-primary'>Project</h2>
-              {profile.projects.length > 0 ? (
-                <Fragment>
-                  {profile.projects.map(pro => (
-                    <ProfileProject key={pro._id} projects={pro} />
-                  ))}
-                </Fragment>
-              ) : (
-                <h4>No education credentials</h4>
-              )}
+            <div className='col-sm-4 col-xs-12'>
+              <div className='row'>
+                <div className='col-sm-12 col-xs-12'>
+                  <ProfileAbout profile={profile} />
+                </div>
+                <div className='col-sm-12 col-xs-12'>
+                  <ProfileContact profile={profile} />
+                </div>
+              </div>
             </div>
           </div>
         </Fragment>

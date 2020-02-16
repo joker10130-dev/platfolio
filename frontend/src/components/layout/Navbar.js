@@ -45,7 +45,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
   return (
     <Fragment>
-      <nav className='navbar bg-dark'>
+      <nav className='navbar'>
         <h1 className='navbar-brand'>
           <Link to='/'>
             <i className='fas fa-folder-open' /> Platfolio
