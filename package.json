@@ -22,7 +22,7 @@
   "homepage": "https://github.com/joker10130-dev/platfolio#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "config": "^3.2.5",
+    "config": "^3.3.8",
     "eslint-plugin-react": "^7.18.3",
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
