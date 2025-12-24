@@ -1,9 +1,7 @@
 Platfolio - Full Stack MERN Project
 A professional portfolio platform built with the MERN stack (MongoDB, Express, React, and Node.js). This project uses Vite for the frontend and is optimized for deployment on Vercel.
 
-(This project is Serverless, so it takes a delay when opening the web for the first time)
-
-Shutterstock
+(This project is Serverless in Vercel, so it takes a delay when opening the deployed web for the first time)
 
 🚀 Getting Started
 Follow these steps to get the project running on your local machine.
