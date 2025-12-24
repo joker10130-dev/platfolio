@@ -2,13 +2,12 @@
   "name": "platfolio",
   "version": "1.0.0",
   "description": "Personal project from MERN stack",
-  "main": "server.js",
+  "type": "module",
+  "main": "api/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "npx nodemon server",
-    "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "dev": "node api/index.js",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node api/index.js"
   },
   "repository": {
     "type": "git",
@@ -35,5 +34,7 @@
     "concurrently": "^5.1.0",
     "eslint": "^9.39.2"
   },
-  "type": "module"
+  "engines": {
+    "node": "18.x"
+  }
 }
