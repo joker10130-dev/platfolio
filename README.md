@@ -3,7 +3,7 @@ A professional portfolio platform built with the MERN stack (MongoDB, Express, R
 
 (This project is Serverless in Vercel, so it takes a delay when opening the deployed web for the first time)
 
-The Vercel portfolio page takes around 3 seconds to load the list of profiles
+#The Vercel portfolio page takes around 3 seconds to load the list of profiles
 [https://platfolio.vercel.app/](https://platfolio.vercel.app/)
 
 🚀 Getting Started
@@ -18,10 +18,10 @@ MongoDB: A local instance or a MongoDB Atlas account.
 
 🛠️ Installation & Setup
 1. Clone the repository
-Bash
-
+```bash
 git clone https://github.com/joker10130-dev/platfolio.git
 cd platfolio
+```
 2. Install Dependencies
 You need to install dependencies for both the root (backend) and the frontend folder.
 
