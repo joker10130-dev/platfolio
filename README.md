@@ -3,20 +3,21 @@ A professional portfolio platform built with the MERN stack (MongoDB, Express, R
 
 (This project is Serverless in Vercel, so it takes a delay when opening the deployed web for the first time)
 
-#The Vercel portfolio page takes around 3 seconds to load the list of profiles
+The Vercel portfolio page takes around 3 seconds to load the list of profiles
+
 [https://platfolio.vercel.app/](https://platfolio.vercel.app/)
 
-🚀 Getting Started
+# 🚀 Getting Started
 Follow these steps to get the project running on your local machine.
 
-#Prerequisites
+# Prerequisites
 Node.js: Version 24.x or higher
 
 npm: Version 9.x or higher
 
 MongoDB: A local instance or a MongoDB Atlas account.
 
-🛠️ Installation & Setup
+# 🛠️ Installation & Setup
 1. Clone the repository
 ```bash
 git clone https://github.com/joker10130-dev/platfolio.git
@@ -40,13 +41,12 @@ cd ..
 3. Environment Variables
 Create a .env file in the root directory and add your credentials:
 
-Code snippet
 ```env
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 NODE_ENV=development
 ```
-💻 Running Locally
+# 💻 Running Locally
 To run the project locally, you need to start the backend and the frontend in two separate terminals.
 
 Terminal 1: Backend (Express)
@@ -68,7 +68,7 @@ Your frontend should start on http://localhost:5173
 
 Note: The frontend is configured via vite.config.js to proxy /api requests to the backend automatically.
 
-📦 Deployment to Vercel
+# 📦 Deployment to Vercel
 This project is configured as a Vercel Monorepo.
 
 Push your code to GitHub.
@@ -87,7 +87,7 @@ Output Directory: frontend/dist
 
 Environment Variables: Add your MONGO_URI and JWT_SECRET in the Vercel Settings tab.
 
-📂 Project Structure
+# 📂 Project Structure
 ```plain
 ├── api/             # Express server logic (Vercel Serverless Functions)
 ├── config/          # Database configuration
