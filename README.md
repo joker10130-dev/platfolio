@@ -3,6 +3,9 @@ A professional portfolio platform built with the MERN stack (MongoDB, Express, R
 
 (This project is Serverless in Vercel, so it takes a delay when opening the deployed web for the first time)
 
+The Vercel portfolio page takes around 3 seconds to load the list of profiles
+[https://platfolio.vercel.app/](https://platfolio.vercel.app/)
+
 🚀 Getting Started
 Follow these steps to get the project running on your local machine.
 
